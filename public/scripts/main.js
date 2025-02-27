@@ -1,21 +1,18 @@
-$('#auth').onclick = async () => {
-	const success = await authenticate(true);
-	if (success) onAuth();
-};
+$('#auth').onclick = () => authenticate(true);
+$('#out').onclick = signOut;
+
+authFromURL();
 
 async function onAuth() {
 	$('#out').disabled = false;
 	$('#write').disabled = false;
 
 	const data = await getAccountInfo();
-	const { name, email } = data;
-	$('#name').innerText = name;
-	$('#email').innerText = email;
+	$('#name').innerText = data.name;
+	$('#email').innerText = data.email;
 }
 
-$('#out').onclick = signOut;
+if (userSignedIn()) onAuth();
 
 STORAGE.onChange(console.log);
 $('#write').onclick = e => STORAGE.write('test.txt', 'Hello, World!');
-
-if (userSignedIn()) onAuth();
