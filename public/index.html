@@ -4,14 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content" />
 		<meta name="color-scheme" content="dark" />
-		<meta name="theme-color" content="#131313" />
+		<meta name="theme-color" content="#191919" />
 		<link rel="icon" href="https://icons.ngwy.fr/badge/resize/none/ffffff/192/192" />
 		<link rel="manifest" href="manifest.json" />
 
 		<!-- Title -->
-		<title>Express template</title>
-		<meta name="og:title" content="Express template" />
-		<meta name="twitter:title" content="Express template" />
+		<title>Nothing</title>
+		<meta name="og:title" content="Nothing" />
+		<meta name="twitter:title" content="Nothing" />
 
 		<!-- Description -->
 		<meta name="description" content="An express and scss project template." />
@@ -29,14 +29,12 @@
 		<!-- Scripts -->
 		<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
 		<script src="https://nosuite.ngwy.fr/scripts/utils.js" defer></script>
-		<script src="./scripts/main.js" defer></script>
+
+		<!-- Components -->
+		<script src="./scripts/components/account-panel.js" defer></script>
+		<script src="./scripts/components/main-app.js" defer></script>
 	</head>
-	<body>
-		<h2>Express template</h2>
-		<p>Name : <span id="name"></span></p>
-		<p>Email : <span id="email"></span></p>
-		<button id="auth">Sign in with Nosuite account</button>
-		<button id="out" disabled>Sign out</button>
-		<button id="write" disabled>Write on storage</button>
+	<body class="dark">
+		<main-app></main-app>
 	</body>
 </html>

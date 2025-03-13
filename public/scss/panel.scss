@@ -1,0 +1,21 @@
+.panel,
+input,
+button {
+	--radius: 0.5em;
+	border-radius: var(--radius);
+	background-color: var(--bg-3);
+	overflow: hidden;
+	border: 1px solid var(--bg-1);
+}
+
+button:hover,
+.hoverable:hover {
+	background-color: var(--bg-4);
+}
+
+input,
+button {
+	padding: 0.7em 1em;
+	font-size: 1rem;
+	color: var(--txt-2);
+}

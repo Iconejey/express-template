@@ -36,8 +36,13 @@
 	box-sizing: border-box;
 }
 
+*:focus {
+	outline: none;
+}
+
 body {
 	font-family: 'segoeui', sans-serif;
+	color: var(--txt-2);
 }
 
 .icon {
